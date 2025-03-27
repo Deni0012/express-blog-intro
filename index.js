@@ -9,3 +9,8 @@ app.use(express.static('public'));
 app.get('/', (req, resp) => {
     rend.send("Server del mio blog");
 })
+
+//Creiamo poi una rotta / bacheca che restituisca un oggetto json con la lista dei post.
+app.get('/bacheca', (req, res) => {
+    rend.send(post);
+})
